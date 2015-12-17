@@ -78,10 +78,10 @@ namespace Boundaries {
 
 	const uint32_t *get()
 	{
-		//if ((max_dif(bt_2) * static_cast<uint64_t>(MAX_B)) / bt_2[257] >= (AGGR_HUGE * 5)) {
-		//	// std::cerr << "Using bt_2.\n";
-		//	return bt_2;
-		//}
+		if ((max_dif(bt_2) * static_cast<uint64_t>(MAX_B)) / bt_2[257] >= (AGGR_HUGE * 5)) {
+			// std::cerr << "Using bt_2.\n";
+			return bt_2;
+		}
 
 		// std::cerr << "Using bt_1.\n";
 		return bt_1;
